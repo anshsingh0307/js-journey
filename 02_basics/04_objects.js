@@ -56,3 +56,18 @@ console.log(Object.keys(tinderUser))   // return type = array  // returns the ke
 console.log(Object.values(tinderUser))  // returs the values
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))  //tells if this key is present in the object or not
+
+
+
+// *********** Destructuring *********
+
+const course = {
+    coursename: "JS in hindi",
+    price: "free",
+    courseInstructor: "hitesh"
+}
+
+const {courseInstructor: Instructor} = course
+console.log(Instructor)                       // pura course.courseInstructor ki jagah we only wrote Instructor , this is destructuring 
+
+// we aslo studied about JSON and API in this lecture (badhiya samjhaya revisit this)
