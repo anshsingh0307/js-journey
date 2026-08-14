@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(function(){
+        console.log("ansh")
+    },2000)                      // here 2000 is the time after which the function will be performed (here 2000ms = 2sec)
+    // it means 2 sec baad ansh print hoga (this is the work of timeout function)
+
+    //Other way to do it
+    const sayAnsh = function(){
+        console.log("Ansh")
+    }
+
+    setTimeout(sayAnsh, 2000)
+
+    const changeText = function(){
+    document.querySelector('h1').innerHTML = "Besttt JS Series"
+    }
+    const changeMe = setTimeout(changeText, 2000)
+    
+    document.querySelector('#stop')
+    addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+</script>
+</html>
